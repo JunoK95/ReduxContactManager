@@ -3,7 +3,7 @@ import TextInputGroup from '../layout/TextInputGroup';
 import { connect } from 'react-redux';
 import { addContact } from '../../actions/contactActions.js';
 import PropTypes from 'prop-types';
-import uuid from 'uuid'
+//import uuid from 'uuid' <-don't need anymore because id is generated in backend
 
 class AddContact extends Component {
   state = {
@@ -35,7 +35,7 @@ class AddContact extends Component {
     }
 
     const newContact = {
-      id: uuid(),
+      //id: uuid(), <- Unused, ID is generated in backend
       name,
       email,
       phone
